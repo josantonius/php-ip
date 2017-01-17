@@ -6,7 +6,6 @@
  * @package    Ip
  * @subpackage Ip
  * @author     Tobias Sette Class - http://github.com/gnumoksha 
- * @author     Josantonius - info@josantonius.com
  * @copyright  Copyright (c) 2017 JST PHP Framework
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @version    1.0.0
