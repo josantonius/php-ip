@@ -1,6 +1,6 @@
 {
     "name":        "josantonius/ip",
-    "version":     "1.0.0",
+    "version":     "1.1.0",
     "type":        "library",
     "description": "PHP class to get user IP.",
     "keywords": [
@@ -22,7 +22,7 @@
     "minimum-stability": "dev",
     "prefer-stable" : true,
     "require": {
-        "php" : ">=7.0"
+        "php" : ">=5.6"
     },
     "autoload": {
         "psr-4": {

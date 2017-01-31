@@ -8,9 +8,9 @@
  * @author     Tobias Sette Class - http://github.com/gnumoksha 
  * @copyright  Copyright (c) 2017 JST PHP Framework
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @version    1.0.0
+ * @version    1.1.0
  * @link       https://github.com/Josantonius/PHP-Ip
- * @since      File available since 1.0.0 - Update: 2017-01-17
+ * @since      File available since 1.0.0 - Update: 2017-01-30
  */
 
 namespace Josantonius\Ip;
@@ -225,6 +225,6 @@ class Ip {
         
         $is_ip = preg_match('|^([0-9]{1,3}\.){3,3}[0-9]{1,3}|', $ip, $regs)[0];
 
-        return $regs[0] ?? false;
+        return (isset($regs[0])) ? $regs[0] : false;
     } 
 }
