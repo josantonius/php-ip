@@ -3,6 +3,7 @@
  * PHP class to get user IP.
  * 
  * @author     Tobias Sette Class - http://github.com/gnumoksha 
+ * @author     Josantonius - hello@josantonius.com
  * @copyright  Copyright (c) 2017
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link       https://github.com/Josantonius/PHP-Ip
@@ -10,8 +11,6 @@
  */
 
 namespace Josantonius\Ip;
-
-# use Josantonius\Ip\Exception\IpException;
 
 /**
  * IP handler.
@@ -25,7 +24,7 @@ class Ip {
      *
      * @since 1.0.0
      *
-     * @return string|false → ip of the user or false in the case of not finding it
+     * @return string|false → ip of the user
      */
     static function get() { 
 
@@ -222,5 +221,19 @@ class Ip {
         $is_ip = preg_match('|^([0-9]{1,3}\.){3,3}[0-9]{1,3}|', $ip, $regs)[0];
 
         return (isset($regs[0])) ? $regs[0] : false;
-    } 
+    }
+
+    /**
+     * Validate ip.
+     *
+     * @since 1.1.3
+     *
+     * @param string $ip
+     *
+     * @return boolean
+     */
+    public static function validate($ip) {
+
+        return (filter_var($ip, FILTER_VALIDATE_IP)) ? true : false;
+    }
 }

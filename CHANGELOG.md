@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.1.2 - 2017-07-09
+* Added `Josantonius\Ip\Ip::validate()` method.
+
 ## 1.1.1 - 2017-03-18
 * Some files were excluded from download and comments and readme files were updated.
 
