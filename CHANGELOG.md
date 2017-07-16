@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.1.3 - 2017-07-16
+* Deleted `Josantonius\Ip\Exception\IpException` class.
+* Deleted `Josantonius\Ip\Exception\Exceptions` abstract class.
+* Deleted `Josantonius\Ip\Exception\IpException->__construct()` method.
+
 ## 1.1.2 - 2017-07-09
 * Added `Josantonius\Ip\Ip::validate()` method.
 
