@@ -24,7 +24,7 @@ class Ip {
      *
      * @since 1.0.0
      *
-     * @return string|false → ip of the user
+     * @return string|false → user IP
      */
     static function get() { 
 
@@ -38,7 +38,7 @@ class Ip {
                $HTTP_X_FORWARDED_FOR;
 
         /**
-         * Obtain ip from the IP address of the server where the script is running
+         * Obtain ip from the IP address of the server
          */
         if (empty($REMOTE_ADDR)) { 
 
@@ -98,7 +98,6 @@ class Ip {
                 $HTTP_FORWARDED_FOR = $_SERVER['HTTP_FORWARDED_FOR']; 
 
             } else if (!empty($_ENV) && isset($_ENV['HTTP_FORWARDED_FOR'])) { 
-
                 $HTTP_FORWARDED_FOR = $_ENV['HTTP_FORWARDED_FOR']; 
 
             } else if (@getenv('HTTP_FORWARDED_FOR')) { 
@@ -145,7 +144,7 @@ class Ip {
 
                 $HTTP_X_COMING_FROM = $_SERVER['HTTP_X_COMING_FROM']; 
 
-            } else if (!empty($_ENV) && isset($_ENV['HTTP_X_COMING_FROM'])) { 
+            } else if (!empty($_ENV) && isset($_ENV['HTTP_X_COMING_FROM'])) {
 
                $HTTP_X_COMING_FROM = $_ENV['HTTP_X_COMING_FROM']; 
 
@@ -174,10 +173,7 @@ class Ip {
         /**
          * Get the user's default ip
          */
-        if (!empty($REMOTE_ADDR)) { 
-
-            $direct_ip = $REMOTE_ADDR; 
-        } 
+        $direct_ip = !empty($REMOTE_ADDR) ? $REMOTE_ADDR : false;
 
         /**
          * Obtain the proxy ips sent by the user
@@ -218,9 +214,7 @@ class Ip {
          */
         $ip = empty(!$proxy_ip) ? $proxy_ip : $direct_ip;
         
-        $is_ip = preg_match('|^([0-9]{1,3}\.){3,3}[0-9]{1,3}|', $ip, $regs)[0];
-
-        return (isset($regs[0])) ? $regs[0] : false;
+        return self::validate($ip) ? $ip : false;
     }
 
     /**
@@ -234,6 +228,6 @@ class Ip {
      */
     public static function validate($ip) {
 
-        return (filter_var($ip, FILTER_VALIDATE_IP)) ? true : false;
+        return filter_var($ip, FILTER_VALIDATE_IP) ? true : false;
     }
 }

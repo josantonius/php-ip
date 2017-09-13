@@ -9,24 +9,61 @@
  * @since      1.1.3
  */
 
-namespace Josantonius\Ip\Tests;
+namespace Josantonius\Ip\Test;
 
-use Josantonius\Ip\Ip;
+use Josantonius\Ip\Ip,
+    PHPUnit\Framework\TestCase;
 
 /**
  * Tests class for Ip library.
  *
  * @since 1.1.3
  */
-class IpTest { 
+final class IpTest extends TestCase {
 
     /**
-     * Get user's ip
+     * Validate IP.
      *
      * @since 1.1.3
+     *
+     * @return void
      */
-    static function testGetIp() {
+    public function testValidateIp() {
 
-        var_dump(Ip::get()); 
+        $this->assertTrue(
+
+            Ip::validate('8.11.0.8')
+        ); 
+    }
+
+    /**
+     * Validate wrong IP.
+     *
+     * @since 1.1.3
+     *
+     * @return void
+     */
+    public function testValidateWrongIp() {
+
+        $this->assertFalse(
+
+            Ip::validate('08.11.0.8')
+        ); 
+    }
+
+    /**
+     * Get user IP.
+     *
+     * @since 1.1.3
+     *
+     * @return void
+     */
+    public function testGetIp() {
+
+        $this->assertContains(
+
+            '8.11.0.8',
+            Ip::get()
+        ); 
     }
 }

@@ -11,6 +11,9 @@
          syntaxCheck="false"
          bootstrap="tests/bootstrap.php"
 >
+    <php>
+        <server name='REMOTE_ADDR' value='8.11.0.8' />
+    </php>
     <testsuites>
         <testsuite name="Ip Test Suite">
             <directory>tests/Ip</directory>

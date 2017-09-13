@@ -18,6 +18,8 @@
 
 * Deleted `Josantonius\Ip\Tests\IpTest::testGetIp()` method.
 
+* Added `Josantonius\Ip\Test\IpTest::testValidateIp()` method.
+* Added `Josantonius\Ip\Test\IpTest::testValidateWrongIp()` method.
 * Added `Josantonius\Ip\Test\IpTest::testGetIp()` method.
 
 ## 1.1.3 - 2017-07-16
