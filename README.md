@@ -1,6 +1,6 @@
 # PHP Ip library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/ip/v/stable)](https://packagist.org/packages/josantonius/ip) [![Total Downloads](https://poser.pugx.org/josantonius/ip/downloads)](https://packagist.org/packages/josantonius/ip) [![Latest Unstable Version](https://poser.pugx.org/josantonius/ip/v/unstable)](https://packagist.org/packages/josantonius/ip) [![License](https://poser.pugx.org/josantonius/ip/license)](https://packagist.org/packages/josantonius/ip)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/ip/v/stable)](https://packagist.org/packages/josantonius/ip) [![Total Downloads](https://poser.pugx.org/josantonius/ip/downloads)](https://packagist.org/packages/josantonius/ip) [![Latest Unstable Version](https://poser.pugx.org/josantonius/ip/v/unstable)](https://packagist.org/packages/josantonius/ip) [![License](https://poser.pugx.org/josantonius/ip/license)](https://packagist.org/packages/josantonius/ip) [![Travis](https://travis-ci.org/Josantonius/PHP-Ip.svg)](https://travis-ci.org/Josantonius/PHP-Ip)
 
 [Versión en español](README-ES.md)
 
@@ -18,16 +18,6 @@ PHP class to get user IP.
 - [Repository](#repository)
 - [License](#license)
 - [Copyright](#copyright)
-
----
-
-<p align="center"><strong>Take a look at the code</strong></p>
-
-<p align="center">
-  <a href="https://youtu.be/vqPAgdpsYfk" title="Take a look at the code">
-  	<img src="https://raw.githubusercontent.com/Josantonius/PHP-Algorithm/master/resources/youtube-thumbnail.jpg">
-  </a>
-</p>
 
 ---
 
@@ -82,22 +72,13 @@ print_r(Ip::get()); # 66.249.76.29
 
 ### Tests 
 
-To use the [test](tests) class, simply:
+To run [tests](tests/Ip/test) simply:
 
-```php
-<?php
-$loader = require __DIR__ . '/vendor/autoload.php';
+    $ git clone https://github.com/Josantonius/PHP-Ip.git
+    
+    $ cd PHP-Ip
 
-$loader->addPsr4('Josantonius\\Ip\\Tests\\', __DIR__ . '/vendor/josantonius/ip/tests');
-
-use Josantonius\Ip\Tests\IpTest;
-
-```
-Available test methods in this library:
-
-```php
-IpTest::testGetIp();
-```
+    $ phpunit
 
 ### Contribute
 1. Check for open issues or open a new issue to start a discussion around a bug or feature.

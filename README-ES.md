@@ -1,6 +1,6 @@
 # PHP Ip library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/ip/v/stable)](https://packagist.org/packages/josantonius/ip) [![Total Downloads](https://poser.pugx.org/josantonius/ip/downloads)](https://packagist.org/packages/josantonius/ip) [![Latest Unstable Version](https://poser.pugx.org/josantonius/ip/v/unstable)](https://packagist.org/packages/josantonius/ip) [![License](https://poser.pugx.org/josantonius/ip/license)](https://packagist.org/packages/josantonius/ip)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/ip/v/stable)](https://packagist.org/packages/josantonius/ip) [![Total Downloads](https://poser.pugx.org/josantonius/ip/downloads)](https://packagist.org/packages/josantonius/ip) [![Latest Unstable Version](https://poser.pugx.org/josantonius/ip/v/unstable)](https://packagist.org/packages/josantonius/ip) [![License](https://poser.pugx.org/josantonius/ip/license)](https://packagist.org/packages/josantonius/ip) [![Travis](https://travis-ci.org/Josantonius/PHP-Ip.svg)](https://travis-ci.org/Josantonius/PHP-Ip)
 
 [English version](README.md)
 
@@ -18,16 +18,6 @@ Biblioteca PHP para obtener la IP del usuario.
 - [Repositorio](#repositorio)
 - [Licencia](#licencia)
 - [Copyright](#copyright)
-
----
-
-<p align="center"><strong>Echa un vistazo al código</strong></p>
-
-<p align="center">
-  <a href="https://youtu.be/vqPAgdpsYfk" title="Echa un vistazo al código">
-  	<img src="https://raw.githubusercontent.com/Josantonius/PHP-Algorithm/master/resources/youtube-thumbnail.jpg">
-  </a>
-</p>
 
 ---
 
@@ -82,21 +72,13 @@ print_r(Ip::get()); # 66.249.76.29
 
 ### Tests 
 
-Para utilizar la clase de [pruebas](tests), simplemente:
+Para ejecutar las [pruebas](tests/Ip/test) simplemente:
 
-```php
-<?php
-$loader = require __DIR__ . '/vendor/autoload.php';
+    $ git clone https://github.com/Josantonius/PHP-Ip.git
+    
+    $ cd PHP-Ip
 
-$loader->addPsr4('Josantonius\\Ip\\Tests\\', __DIR__ . '/vendor/josantonius/ip/tests');
-
-use Josantonius\Ip\Tests\IpTest;
-```
-Métodos de prueba disponibles en esta biblioteca:
-
-```php
-IpTest::testGetIp();
-```
+    $ phpunit
 
 ### Contribuir
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
