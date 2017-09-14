@@ -5,8 +5,6 @@
 * Unit tests supported by `PHPUnit` were added.
 
 * The repository was synchronized with Travis CI to implement continuous integration.
-
-* Type attributes were deleted from HTML tags. Since HTML5 doesn't longer necessary.
  
 * Added `Ip/src/bootstrap.php` file
 
