@@ -57,11 +57,13 @@ class Ip
         $possibleKeys = [
             'HTTP_X_FORWARDED_FOR',
             'HTTP_X_FORWARDED',
+            'HTTP_X_CLUSTER_CLIENT_IP',
             'HTTP_FORWARDED_FOR',
             'HTTP_FORWARDED',
             'HTTP_VIA',
             'HTTP_X_COMING_FROM',
             'HTTP_COMING_FROM',
+            'HTTP_X_REAL_IP',
             'REMOTE_ADDR',
         ];
 
