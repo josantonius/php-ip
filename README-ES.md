@@ -73,7 +73,7 @@ print_r(Ip::get()); # 66.249.76.29
 
 ### Tests 
 
-Para ejecutar las [pruebas](tests/Ip/test) simplemente:
+Para ejecutar las [pruebas](tests/Ip/Test) simplemente:
 
     $ git clone https://github.com/Josantonius/PHP-Ip.git
     
