@@ -3,7 +3,7 @@
  * PHP class to get user IP.
  *
  * @author    Josantonius - <hello@josantonius.com>
- * @copyright 2017 (c) Josantonius - PHP-DataType
+ * @copyright 2017 (c) Josantonius - PHP-Ip
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/Josantonius/PHP-Ip
  * @since     1.1.3
