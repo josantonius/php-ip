@@ -1,7 +1,7 @@
-<?php 
+<?php
 /**
  * PHP class to get user IP.
- * 
+ *
  * @author     Josantonius - info@josantonius.com
  * @copyright  Copyright (c) 2017
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
@@ -11,16 +11,16 @@
 
 namespace Josantonius\Ip\Test;
 
-use Josantonius\Ip\Ip,
-    PHPUnit\Framework\TestCase;
+use Josantonius\Ip\Ip;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests class for Ip library.
  *
  * @since 1.1.3
  */
-final class IpTest extends TestCase {
-
+final class IpTest extends TestCase
+{
     /**
      * Validate IP.
      *
@@ -28,12 +28,11 @@ final class IpTest extends TestCase {
      *
      * @return void
      */
-    public function testValidateIp() {
-
+    public function testValidateIp()
+    {
         $this->assertTrue(
-
             Ip::validate('8.11.0.8')
-        ); 
+        );
     }
 
     /**
@@ -43,12 +42,11 @@ final class IpTest extends TestCase {
      *
      * @return void
      */
-    public function testValidateWrongIp() {
-
+    public function testValidateWrongIp()
+    {
         $this->assertFalse(
-
             Ip::validate('08.11.0.8')
-        ); 
+        );
     }
 
     /**
@@ -58,12 +56,11 @@ final class IpTest extends TestCase {
      *
      * @return void
      */
-    public function testGetIp() {
-
+    public function testGetIp()
+    {
         $this->assertContains(
-
             '8.11.0.8',
             Ip::get()
-        ); 
+        );
     }
 }
