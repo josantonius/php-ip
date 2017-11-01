@@ -6,23 +6,25 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
+         strict="true"
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="tests/bootstrap.php"
->
+         bootstrap="vendor/autoload.php">
+
     <php>
         <server name='REMOTE_ADDR' value='8.11.0.8' />
     </php>
+
     <testsuites>
-        <testsuite name="Ip Test Suite">
-            <directory>tests/Ip</directory>
+        <testsuite name="Test Suite">
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>src/Ip</directory>
+            <directory>src</directory>
         </whitelist>
     </filter>
 </phpunit>

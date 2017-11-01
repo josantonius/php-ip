@@ -2,16 +2,15 @@
 /**
  * PHP class to get user IP.
  *
- * @author     Josantonius - info@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link       https://github.com/Josantonius/PHP-Ip
- * @since      1.1.3
+ * @author    Josantonius - <hello@josantonius.com>
+ * @copyright 2017 (c) Josantonius - PHP-DataType
+ * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
+ * @link      https://github.com/Josantonius/PHP-Ip
+ * @since     1.1.3
  */
 
-namespace Josantonius\Ip\Test;
+namespace Josantonius\Ip;
 
-use Josantonius\Ip\Ip;
 use PHPUnit\Framework\TestCase;
 
 /**

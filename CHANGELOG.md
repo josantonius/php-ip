@@ -1,5 +1,29 @@
 # CHANGELOG
 
+## 1.1.5 - 2017-11-01
+
+* Implemented `PSR-4 autoloader standard` from all library files.
+
+* Implemented `PSR-2 coding standard` from all library PHP files.
+
+* Implemented `PHPCS` to ensure that PHP code complies with `PSR2` code standards.
+
+* Implemented `Codacy` to automates code reviews and monitors code quality over time.
+
+* Implemented `Codecov` to coverage reports.
+
+* Added `Ip/phpcs.ruleset.xml` file.
+
+* Deleted `Ip/src/bootstrap.php` file.
+
+* Deleted `Ip/tests/bootstrap.php` file.
+
+* Deleted `Ip/vendor` folder.
+
+* Changed `Josantonius\Ip\Test\IpTest` class to  `Josantonius\Ip\IpTest` class.
+
+* Added `Josantonius\Ip\Ip::getGlobalValue()` method.
+
 ## 1.1.4 - 2017-09-14
 
 * Unit tests supported by `PHPUnit` were added.
