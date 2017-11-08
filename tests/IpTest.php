@@ -59,7 +59,7 @@ final class IpTest extends TestCase
     public function testValidateIp()
     {
         $this->assertTrue(
-            Ip::validate('8.11.0.8')
+            $this->Ip->validate('8.11.0.8')
         );
     }
 
@@ -71,7 +71,7 @@ final class IpTest extends TestCase
     public function testValidateWrongIp()
     {
         $this->assertFalse(
-            Ip::validate('08.11.0.8')
+            $this->Ip->validate('08.11.0.8')
         );
     }
 
@@ -84,7 +84,7 @@ final class IpTest extends TestCase
     {
         $this->assertContains(
             '8.11.0.8',
-            Ip::get()
+            $this->Ip->get()
         );
     }
 }
