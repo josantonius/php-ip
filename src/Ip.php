@@ -9,7 +9,6 @@
  * @link      https://github.com/Josantonius/PHP-Ip
  * @since     1.0.0
  */
-
 namespace Josantonius\Ip;
 
 /**
@@ -57,7 +56,7 @@ class Ip
      *
      * @param string $ip → IP address to be validated
      *
-     * @return boolean
+     * @return bool
      */
     public static function validate($ip)
     {

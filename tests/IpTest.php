@@ -8,7 +8,6 @@
  * @link      https://github.com/Josantonius/PHP-Ip
  * @since     1.1.3
  */
-
 namespace Josantonius\Ip;
 
 use PHPUnit\Framework\TestCase;
@@ -21,11 +20,41 @@ use PHPUnit\Framework\TestCase;
 final class IpTest extends TestCase
 {
     /**
+     * Ip instance.
+     *
+     * @since 1.1.6
+     *
+     * @var object
+     */
+    protected $Ip;
+
+    /**
+     * Set up.
+     *
+     * @since 1.1.6
+     */
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this->Ip = new Ip;
+    }
+
+    /**
+     * Check if it is an instance of Ip.
+     *
+     * @since 1.1.6
+     */
+    public function testIsInstanceOfIp()
+    {
+        $actual = $this->Ip;
+        $this->assertInstanceOf('Josantonius\Ip\Ip', $actual);
+    }
+
+    /**
      * Validate IP.
      *
      * @since 1.1.3
-     *
-     * @return void
      */
     public function testValidateIp()
     {
@@ -38,8 +67,6 @@ final class IpTest extends TestCase
      * Validate wrong IP.
      *
      * @since 1.1.3
-     *
-     * @return void
      */
     public function testValidateWrongIp()
     {
@@ -52,8 +79,6 @@ final class IpTest extends TestCase
      * Get user IP.
      *
      * @since 1.1.3
-     *
-     * @return void
      */
     public function testGetIp()
     {
