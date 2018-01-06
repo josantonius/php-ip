@@ -136,10 +136,10 @@ Ejecutar todas las pruebas anteriores:
 
 ## ☑ Tareas pendientes
 
-- [ ] Añadir nueva funcionalidad
-- [ ] Mejorar pruebas
-- [ ] Mejorar documentación
-- [ ] Refactorizar código
+- [ ] Añadir nueva funcionalidad.
+- [ ] Mejorar pruebas.
+- [ ] Mejorar documentación.
+- [ ] Refactorizar código para las reglas de estilo de código deshabilitadas. Ver [phpmd.xml](phpmd.xml) y [.php_cs.dist](.php_cs.dist).
 
 ## Contribuir
 
@@ -156,6 +156,12 @@ Si deseas colaborar, puedes echar un vistazo a la lista de
 * Crea una nueva rama (**branch**), **commit**, **push** y envíame un
   [pull request](https://help.github.com/articles/using-pull-requests).
 
+¡Gracias a quienes ya habéis contribuido a este proyecto!
+
+[<img alt="Josantonius" src="https://avatars1.githubusercontent.com/u/18104336?v=4&s=117 width=117">](https://github.com/Josantonius) |[<img alt="MASNathan" src="https://avatars0.githubusercontent.com/u/2139464?v=4&s=117 width=117">](https://github.com/MASNathan) |
+:---:|:---:|
+[Josantonius](https://github.com/Josantonius)|[MASNathan](https://github.com/MASNathan)|
+
 ## Repositorio
 
 La estructura de archivos de este repositorio se creó con [PHP-Skeleton](https://github.com/Josantonius/PHP-Skeleton).
@@ -166,7 +172,7 @@ Este proyecto está licenciado bajo **licencia MIT**. Consulta el archivo [LICEN
 
 ## Copyright
 
-2017 Josantonius, [josantonius.com](https://josantonius.com/)
+2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
 
 Si te ha resultado útil, házmelo saber :wink:
 

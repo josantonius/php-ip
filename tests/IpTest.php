@@ -3,7 +3,7 @@
  * PHP class to get user IP.
  *
  * @author    Josantonius - <hello@josantonius.com>
- * @copyright 2017 (c) Josantonius - PHP-Ip
+ * @copyright 2017 - 2018 (c) Josantonius - PHP-Ip
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/Josantonius/PHP-Ip
  * @since     1.1.3
@@ -14,8 +14,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Tests class for Ip library.
- *
- * @since 1.1.3
  */
 final class IpTest extends TestCase
 {
@@ -47,44 +45,43 @@ final class IpTest extends TestCase
      */
     public function testIsInstanceOfIp()
     {
-        $actual = $this->Ip;
-        $this->assertInstanceOf('Josantonius\Ip\Ip', $actual);
+        $this->assertInstanceOf('Josantonius\Ip\Ip', $this->Ip);
     }
 
     /**
      * Validate IP.
-     *
-     * @since 1.1.3
      */
     public function testValidateIp()
     {
+        $ip = $this->Ip;
+
         $this->assertTrue(
-            $this->Ip->validate('8.11.0.8')
+            $ip::validate('8.11.0.8')
         );
     }
 
     /**
      * Validate wrong IP.
-     *
-     * @since 1.1.3
      */
     public function testValidateWrongIp()
     {
+        $ip = $this->Ip;
+
         $this->assertFalse(
-            $this->Ip->validate('08.11.0.8')
+            $ip::validate('08.11.0.8')
         );
     }
 
     /**
      * Get user IP.
-     *
-     * @since 1.1.3
      */
     public function testGetIp()
     {
+        $ip = $this->Ip;
+
         $this->assertContains(
             '8.11.0.8',
-            $this->Ip->get()
+            $ip::get()
         );
     }
 }

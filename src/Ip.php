@@ -2,9 +2,9 @@
 /**
  * PHP class to get user IP.
  *
- * @author    MASNathan - https://github.com/MASNathan
+ * @author    MASNathan - <https://github.com/MASNathan>
  * @author    Josantonius - <hello@josantonius.com>
- * @copyright 2017 (c) Josantonius - PHP-Ip
+ * @copyright 2017 - 2018 (c) Josantonius - PHP-Ip
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/Josantonius/PHP-Ip
  * @since     1.0.0
@@ -13,15 +13,11 @@ namespace Josantonius\Ip;
 
 /**
  * IP handler.
- *
- * @since 1.0.0
  */
 class Ip
 {
     /**
      * Get user's IP.
-     *
-     * @since 1.0.0
      *
      * @return string|false → user IP
      */
