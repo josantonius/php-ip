@@ -156,11 +156,11 @@ If you would like to help, please take a look at the list of
 * Create a **branch**, **commit**, **push** and send me a
   [pull request](https://help.github.com/articles/using-pull-requests).
 
-Thank you to all the people who already contributed to this project!
+**Thank you to all the people who already contributed to this project!**
 
-[<img alt="Josantonius" src="https://avatars1.githubusercontent.com/u/18104336?v=4&s=117 width=117">](https://github.com/Josantonius) |[<img alt="MASNathan" src="https://avatars0.githubusercontent.com/u/2139464?v=4&s=117 width=117">](https://github.com/MASNathan) |
-:---:|:---:|
-[Josantonius](https://github.com/Josantonius)|[MASNathan](https://github.com/MASNathan)|
+[<img alt="Josantonius" src="https://avatars1.githubusercontent.com/u/18104336?v=4&s=117 width=117">](https://github.com/Josantonius) |
+:---:|
+[MASNathan](https://github.com/MASNathan)|
 
 ## Repository
 
