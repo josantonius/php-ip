@@ -1,10 +1,17 @@
 # PHP Ip library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/Ip/v/stable)](https://packagist.org/packages/josantonius/Ip) [![Latest Unstable Version](https://poser.pugx.org/josantonius/Ip/v/unstable)](https://packagist.org/packages/josantonius/Ip) [![License](https://poser.pugx.org/josantonius/Ip/license)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9a38ca1727464eb2bbac06a1bb163bce)](https://www.codacy.com/app/Josantonius/PHP-Ip?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/PHP-Ip&amp;utm_campaign=Badge_Grade) [![Total Downloads](https://poser.pugx.org/josantonius/Ip/downloads)](https://packagist.org/packages/josantonius/Ip) [![Travis](https://travis-ci.org/Josantonius/PHP-Ip.svg)](https://travis-ci.org/Josantonius/PHP-Ip) [![PSR2](https://img.shields.io/badge/PSR-2-1abc9c.svg)](http://www.php-fig.org/psr/psr-2/) [![PSR4](https://img.shields.io/badge/PSR-4-9b59b6.svg)](http://www.php-fig.org/psr/psr-4/) [![CodeCov](https://codecov.io/gh/Josantonius/PHP-Ip/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/PHP-Ip)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/Ip/v/stable)](https://packagist.org/packages/josantonius/Ip)
+[![License](https://poser.pugx.org/josantonius/Ip/license)](LICENSE)
 
 [Versión en español](README-ES.md)
 
 PHP class to get user IP.
+
+>After reviewing the code after a few years, I would not recommend the use of the class for a
+>production site, as preference was given to headers easily manipulated by the user to get the IP.
+
+>If the reliability of the header from which the IP will be obtained is not guaranteed,
+>it is better to use $_SERVER['REMOTE_ADDR'] directly or develop a custom solution.
 
 ---
 
@@ -14,11 +21,8 @@ PHP class to get user IP.
 - [Quick Start](#quick-start)
 - [Usage](#usage)
 - [Tests](#tests)
-- [TODO](#-todo)
-- [Contribute](#contribute)
-- [Repository](#repository)
+- [Sponsor](#Sponsor)
 - [License](#license)
-- [Copyright](#copyright)
 
 ---
 
@@ -32,27 +36,27 @@ The preferred way to install this extension is through [Composer](http://getcomp
 
 To install **PHP Ip library**, simply:
 
-    $ composer require Josantonius/Ip
+    composer require Josantonius/Ip
 
 The previous command will only install the necessary files, if you prefer to **download the entire source code** you can use:
 
-    $ composer require Josantonius/Ip --prefer-source
+    composer require Josantonius/Ip --prefer-source
 
 You can also **clone the complete repository** with Git:
 
-  $ git clone https://github.com/Josantonius/PHP-Ip.git
+  $ git clone <https://github.com/Josantonius/PHP-Ip.git>
 
 Or **install it manually**:
 
 [Download Ip.php](https://raw.githubusercontent.com/Josantonius/PHP-Ip/master/src/Ip.php):
 
-    $ wget https://raw.githubusercontent.com/Josantonius/PHP-Ip/master/src/Ip.php
+    wget https://raw.githubusercontent.com/Josantonius/PHP-Ip/master/src/Ip.php
 
 ## Available Methods
 
 Available methods in this library:
 
-### - Get user's IP:
+### - Get user's IP
 
 ```php
 Ip::get();
@@ -60,7 +64,7 @@ Ip::get();
 
 **# Return** (string|false) → user IP or false
 
-### - Validate IP:
+### - Validate IP
 
 ```php
 Ip::validate($ip);
@@ -94,13 +98,13 @@ use Josantonius\Ip\Ip;
 
 Example of use for this library:
 
-### - Get user's IP:
+### - Get user's IP
 
 ```php
 Ip::get();
 ```
 
-### - Validate IP:
+### - Validate IP
 
 ```php
 $ip = Ip::get();
@@ -108,72 +112,39 @@ $ip = Ip::get();
 Ip::validate($ip);
 ```
 
-## Tests 
+## Tests
 
 To run [tests](tests) you just need [composer](http://getcomposer.org/download/) and to execute the following:
 
-    $ git clone https://github.com/Josantonius/PHP-Ip.git
+    git clone https://github.com/Josantonius/PHP-Ip.git
     
-    $ cd PHP-Ip
+    cd PHP-Ip
 
-    $ composer install
+    composer install
 
 Run unit tests with [PHPUnit](https://phpunit.de/):
 
-    $ composer phpunit
+    composer phpunit
 
 Run [PSR2](http://www.php-fig.org/psr/psr-2/) code standard tests with [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer):
 
-    $ composer phpcs
+    composer phpcs
 
 Run [PHP Mess Detector](https://phpmd.org/) tests to detect inconsistencies in code style:
 
-    $ composer phpmd
+    composer phpmd
 
 Run all previous tests:
 
-    $ composer tests
+    composer tests
 
-## ☑ TODO
+## Sponsor
 
-- [ ] Add new feature.
-- [ ] Improve tests.
-- [ ] Improve documentation.
-- [ ] Refactor code for disabled code style rules. See [phpmd.xml](phpmd.xml) and [.php_cs.dist](.php_cs.dist).
-
-## Contribute
-
-If you would like to help, please take a look at the list of
-[issues](https://github.com/Josantonius/PHP-Ip/issues) or the [To Do](#-todo) checklist.
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Run the command `composer install` to install the dependencies.
-  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
-* Run the command `composer fix` to excute code standard fixers.
-* Run the [tests](#tests).
-* Create a **branch**, **commit**, **push** and send me a
-  [pull request](https://help.github.com/articles/using-pull-requests).
-
-**Thank you to all the people who already contributed to this project!**
-
-[<img alt="MASNathan" src="https://avatars0.githubusercontent.com/u/2139464?v=4&s=117 width=117" height="117" width="117">](https://github.com/MASNathan) |
-:---:|
-[MASNathan](https://github.com/MASNathan)|
-
-## Repository
-
-The file structure from this repository was created with [PHP-Skeleton](https://github.com/Josantonius/PHP-Skeleton).
+If this project helps you to reduce your development time,
+[you can sponsor me](https://github.com/josantonius#sponsor) to support my open source work :blush:
 
 ## License
 
-This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+This repository is licensed under the [MIT License](LICENSE).
 
-## Copyright
-
-2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-If you find it useful, let me know :wink:
-
-You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
+Copyright © 2017-2022, [Josantonius](https://github.com/josantonius#contact)

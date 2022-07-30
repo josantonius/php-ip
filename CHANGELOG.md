@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 1.1.8 - 2022-07-30
+
+The repository was archived.
+
+>After reviewing the code after a few years, I would not recommend the use of the class for a
+>production site, as preference was given to headers easily manipulated by the user to get the IP.
+
+>If the reliability of the header from which the IP will be obtained is not guaranteed,
+>it is better to use $_SERVER['REMOTE_ADDR'] directly or develop a custom solution.
+
 ## 1.1.7 - 2018-01-06
 
 * The tests were fixed.
@@ -43,7 +53,7 @@
 * Unit tests supported by `PHPUnit` were added.
 
 * The repository was synchronized with Travis CI to implement continuous integration.
- 
+
 * Added `Ip/src/bootstrap.php` file
 
 * Added `Ip/tests/bootstrap.php` file.
